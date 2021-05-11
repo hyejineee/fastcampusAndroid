@@ -34,6 +34,7 @@ class CalculateBMITest {
 
         onView(withId(R.id.textview_result_bmivalue))
             .check(matches(withText(bmi.toString())))
-    }
 
+
+    }
 }
