@@ -1,10 +1,10 @@
 package com.hyejineee.bmiapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,11 +26,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun setCalculateButtonClickListener() {
         calculateBMIButton.setOnClickListener {
-
-            val bmiResult = BMICalculator().calculateBMI(
-                height = heightEditText.text.toString().toDouble(),
-                weight = weightEditText.text.toString().toDouble()
-            )
 
             startActivity(
                 Intent(this, BMIResultActivity::class.java).apply {
