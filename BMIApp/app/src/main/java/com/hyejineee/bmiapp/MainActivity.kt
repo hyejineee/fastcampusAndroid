@@ -20,17 +20,21 @@ class MainActivity : AppCompatActivity() {
         heightEditText = findViewById(R.id.edittextview_main_height)
         calculateBMIButton = findViewById(R.id.button_main_calculatebmi)
 
-
         setCalculateButtonClickListener()
     }
 
     private fun setCalculateButtonClickListener() {
         calculateBMIButton.setOnClickListener {
-
+            presenter.clickCalculateBMIButton(height, weight)
+            /**
+             * class presenter(){
+             *     Usecase
+             *      clickCalculateBMIButton()
+             * }
+             *
+             * */
             startActivity(
-                Intent(this, BMIResultActivity::class.java).apply {
-                    putExtra("bmiResult", bmiResult)
-                }
+                Intent(this, BMIResultActivity::class.java)
             )
         }
     }

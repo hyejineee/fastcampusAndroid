@@ -6,20 +6,20 @@ import org.junit.Test
 
 import org.junit.Assert.*
 
+//일단은 리팩터링을 통해서 구조를 변경하고 테스트 코드를 작성하면서 의도를 명확하게 하고
 class BMICalculatorTest : DescribeSpec({
 
-    describe("calculate bmi") {
-        context("with weight and height values in positive number") {
-            it("return BMI result") {
-                val bmi:BMI = BMICalculator().calculate(
+    describe("BMICalculator") {
+        context("with weight and height values") {
+            it("return bmi with 2nd decimal place") {
+                val bmi = BMICalculator().calculate(
                     BodyInfo(
                         height = 171.0,
                         weight = 50.0
                     )
                 )
 
-                bmi.bmi shouldBe 17.09
-                bmi.obesity shouldBe "저체중"
+                bmi shouldBe 17.09
             }
         }
     }
