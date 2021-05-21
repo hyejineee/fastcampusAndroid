@@ -1,0 +1,2 @@
+com/hyejineee/domain/test/BuildConfig.java
+ com.hyejineee.domain.test.BuildConfig
