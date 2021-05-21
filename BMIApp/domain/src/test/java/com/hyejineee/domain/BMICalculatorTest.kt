@@ -11,7 +11,7 @@ class BMICalculatorTest : DescribeSpec({
 
     describe("BMICalculator") {
         context("with weight and height values") {
-            it("return bmi with 2nd decimal place") {
+            it("return bmi") {
                 val bmi = BMICalculator().calculate(
                     BodyInfo(
                         height = 171.0,
