@@ -1,4 +1,4 @@
-package com.hyejineee.bmiapp
+package com.hyejineee.lotto
 
 import org.junit.Test
 
