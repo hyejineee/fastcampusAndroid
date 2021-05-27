@@ -2,6 +2,9 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
 }
+//ext { pFlavor = 'domain' }
+
+apply from: "$rootDir/gradle/jacoco.gradle"
 
 android {
     compileSdkVersion 30
@@ -30,15 +33,26 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+        }
+    }
+
 }
+
+
+
 
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-    testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
 
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'io.kotest:kotest-runner-junit5:4.3.2'
 }
+
+
