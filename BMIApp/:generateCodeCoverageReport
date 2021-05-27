@@ -1,0 +1,5 @@
+Starting a Gradle Daemon, 1 incompatible and 3 stopped Daemons could not be reused, use --status for details
+WARNING:: Please remove usages of `jcenter()` Maven repository from your build scripts and migrate your build to other Maven repositories.
+This repository is deprecated and it will be shut down in the future.
+See http://developer.android.com/r/tools/jcenter-end-of-service for more information.
+Currently detected usages in: root project 'BMIApp', project ':app', project ':domain'
